@@ -35,7 +35,7 @@ namespace Infra.Repositories.Generics
             }
         }
 
-        public async Task<List<T>> GetAll ()
+        public async Task<List<T>> ListAll ()
         {
             using (var data = new BaseContext( _optionsBuilder ))
             {
@@ -77,6 +77,8 @@ namespace Infra.Repositories.Generics
             if (disposing) handle.Dispose();
             disposed = true;
         }
+
+
 
         #endregion
     }
